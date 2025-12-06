@@ -8,13 +8,13 @@
     "build": "tsc --build",
     "clean": "tsc --build --clean",
     "tsc": "tsc",
-    "start": "ts-node app.ts",
-    "debug": "ts-node app.ts"
+    "start": "tsc",
+    "debug": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@types/node": "^24.10.1",
     "@typescript-eslint/eslint-plugin": "^8.48.1",
