@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.128-alpha">
+  <PropertyGroup>
+    <StartupCommand>ts-node app.ts</StartupCommand>
+    <StartupCommandWorkingDirectory>
+    </StartupCommandWorkingDirectory>
+  </PropertyGroup>
+</Project>
