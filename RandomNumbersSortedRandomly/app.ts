@@ -1,5 +1,6 @@
 import { randomIntFromInterval } from "./numbershelper.ts";
-import { ArraySorter } from "./arraysorter.ts"
+import { ArraySorter } from "./arraysorter.ts";
+import { HttpArraySender } from "./httparraysender.ts";
 
 const arrayLength = randomIntFromInterval(20, 100);
 let array = new Array<number>(arrayLength);
@@ -11,3 +12,4 @@ for (let i = 0; i < arrayLength; i++) {
 console.log("Sorted array:");
 array = new ArraySorter().sortArray(array);
 console.log(array);
+await new HttpArraySender().sendNumberArray(array);

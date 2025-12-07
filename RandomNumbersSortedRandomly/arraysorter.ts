@@ -21,6 +21,7 @@ export class ArraySorter {
 
 
     private bubbleSort(array: Array<number>): Array<number> {
+        console.log('bubbleSort');
         if (array === undefined) {
             return array;
         }
@@ -41,6 +42,7 @@ export class ArraySorter {
     }
 
     private selectionSort(array: Array<number>): Array<number> {
+        console.log("selectionSort");
         if (array === undefined) {
             return array;
         }
