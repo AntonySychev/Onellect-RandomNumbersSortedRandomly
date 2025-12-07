@@ -1,19 +1,19 @@
 import { randomIntFromInterval } from "./numbershelper.ts";
 
 export class ArraySorter {
-    private readonly sortTypes: { [id: number]: (array: Array<number>) => Array<number> } = {};
-    private readonly numberOfSortTypes;
+    private readonly _sortTypes: { [id: number]: (array: Array<number>) => Array<number> } = {};
+    private readonly _numberOfSortTypes;
 
     constructor() {
-        this.sortTypes[0] = this.bubbleSort;
-        this.sortTypes[1] = this.selectionSort;
-        this.numberOfSortTypes = Object.keys(this.sortTypes).length;
-        this.numberOfSortTypes = 1;
+        this._sortTypes[0] = this.bubbleSort;
+        this._sortTypes[1] = this.selectionSort;
+        this._numberOfSortTypes = Object.keys(this._sortTypes).length;
+        this._numberOfSortTypes = 1;
     }
 
     sortArray(array: Array<number>): Array<number> {
         let sortType: (array: Array<number>) => Array<number>;
-        sortType = this.sortTypes[randomIntFromInterval(0, this.numberOfSortTypes)]!;
+        sortType = this._sortTypes[randomIntFromInterval(0, this._numberOfSortTypes)]!;
         array = sortType(array);
         return array;
     }
@@ -21,7 +21,7 @@ export class ArraySorter {
 
 
     private bubbleSort(array: Array<number>): Array<number> {
-        console.log('bubbleSort');
+        console.log("bubbleSort");
         if (array === undefined) {
             return array;
         }

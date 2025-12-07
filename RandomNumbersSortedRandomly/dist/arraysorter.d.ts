@@ -1,6 +1,6 @@
 export declare class ArraySorter {
-    private readonly sortTypes;
-    private readonly numberOfSortTypes;
+    private readonly _sortTypes;
+    private readonly _numberOfSortTypes;
     constructor();
     sortArray(array: Array<number>): Array<number>;
     private bubbleSort;

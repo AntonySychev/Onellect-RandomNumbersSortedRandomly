@@ -1,7 +1,9 @@
+import { SERVER_URL } from "./httpconfig.ts";
+
 export class HttpArraySender {
     async sendNumberArray(array: Array<number>) {
         try {
-            let response = await fetch("http://somesite.com.ru.com/randomarray", {
+            let response = await fetch(SERVER_URL, {
                 method: "POST",
                 body: JSON.stringify(array),
                 headers: { 'Content-Type': "application/json" }
